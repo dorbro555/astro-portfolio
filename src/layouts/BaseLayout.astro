@@ -1,9 +1,14 @@
 ---
 import NavBar from '../components/NavBar.astro'
+import '../styles/global.css'
+
+interface Props {
+    title: string
+}
 const {title} = Astro.props 
 ---
 
-<html lang="en" data-theme="bumblebee">
+<html lang="en" data-theme="bumblebee" class="bg-base-300">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width">
@@ -11,7 +16,6 @@ const {title} = Astro.props
 
         <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     
-    <link rel="stylesheet" href={Astro.resolve('../styles/global.css')}>
     <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
