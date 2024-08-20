@@ -36,9 +36,9 @@ const posts = await fetchPosts();
 const [firstPost, secondPost] = [posts[0].node, posts[1].node]
 ---
 <section class="flex flex-col justify-center items-center mb-20">
-    <h2 class="text-5xl font-bold mb-4 mt-2">Recent Articles</h2>
+    <h2 class="text-5xl font-bold mb-4 mt-2 opacity-80">Recent Articles</h2>
     <div class="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-8">
-        <div class="card w-96 bg-base-100 shadow-xl">
+        <div class="card w-96 bg-gradient-to-br from-latte-yellow/80 to-latte-maroon/80 shadow-xl">
             <div class="card-body">
               <h2 class="card-title">{firstPost.title}</h2>
               <p>{firstPost.brief}</p>
@@ -51,7 +51,7 @@ const [firstPost, secondPost] = [posts[0].node, posts[1].node]
               </div>
             </div>
         </div>
-        <div class="card w-96 bg-base-100 shadow-xl">
+        <div class="card w-96 bg-gradient-to-tr from-latte-maroon/80 to-latte-yellow/80 shadow-xl">
             <div class="card-body">
                 <h2 class="card-title">{secondPost.title}</h2>
                 <p>{secondPost.brief}</p>
